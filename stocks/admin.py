@@ -1,3 +1,4 @@
 from django.contrib import admin
+from stocks.models import Give
 
-# Register your models here.
+admin.site.register(Give)
