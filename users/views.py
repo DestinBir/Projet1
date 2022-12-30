@@ -5,7 +5,7 @@ from users.models import User, Entr
 
 
 def user(request, slug):
-    current_user = get_object_or_404(User, name=slug)
+    current_user = get_object_or_404(User, username=slug)
     return render(request, 'user.html', context={"user": current_user})
 
 
