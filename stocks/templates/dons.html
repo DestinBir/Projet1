@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>This is the list of Gives</h1>
+    {% for i in dons %}
+    <h2>{{ i.title }}</h2>
+    <h3>{{ i.giver }}</h3>
+    <p>{{ i.date }}</p>
+    {% endfor %}
+{% endblock %}

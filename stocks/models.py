@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Give(models.Model):
     title = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
@@ -7,7 +8,7 @@ class Give(models.Model):
     giver = models.CharField(max_length=120)
     date = models.DateField(auto_created=True)
     inStock = models.BooleanField(default=True)
+    thumb = models.ImageField(upload_to='dons', blank=True, null=True)
 
     def __str__(self) -> str:
         return self.title
-
